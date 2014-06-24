@@ -11,6 +11,9 @@
 
 @interface StoryViewController ()
 @property (weak, nonatomic) IBOutlet UIView *postbgView;
+@property (weak, nonatomic) IBOutlet UIView *commentBoxView;
+- (IBAction)outsideTap:(id)sender;
+- (IBAction)commentTouch:(UITextField *)sender;
 
 - (IBAction)likeUIButton:(UIButton *)sender;
 
@@ -82,6 +85,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)outsideTap:(id)sender {
+    
+}
+
+- (IBAction)commentTouch:(UITextField *)sender {
+   // self.commentBoxView.layer.
 }
 
 - (IBAction)likeUIButton:(UIButton *)sender {

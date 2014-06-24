@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "StoryViewController.h"
 
 @implementation AppDelegate
 
@@ -14,9 +15,18 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    StoryViewController *vc = [[StoryViewController alloc] init];
+    self.window.rootViewController = vc;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
